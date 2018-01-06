@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+body {
+  background: #fff;
+}
+
+.content {
+  margin: auto;
+  padding: 10px;
+  text-align: center;
+}
+
+td {
+  text-align: center;
+  padding: 0px;
+  margin: 0px;
+  text-align: center;
+}
+
+tr {
+  text-align: center;
+  padding: 0px;
+  margin: 0px;
+  height: 20px;
+  vertical-align: top;
+}
+
+.btn {
+  display: block;
+  width: 30px;
+  background-color: aqua;
+  border: 1px solid #000;
+  border-radius: 15px;
+  color: #000;
+  padding: 8px 16px;
+  text-decoration: none;
+}
+
+.btn:hover {
+    background-color: #555;
+    color: white;
+}
+
+</style>
+
+<script src="jquery-3.2.1.js"></script>
+</head>
+<body>
+
+    <canvas id="myCanvas" width="200" height="100" style="position: absolute;top:0px;left:0px;z-index:-10">
+        Your browser does not support the HTML5 canvas tag.</canvas>
+<div class="content">
+<table style="position: absolute;top:0px;left:0px">
+  <tr>
+    <td>
+        |<br><a class="btn" href="#">Q</a>
+      <table>
+          <tr>
+            <td>
+                |<br><a id="123" class="btn" href="#">Q</a>
+                <table>
+                    <tr>
+                      <td>
+                          |<br> <a id="234" class="btn" href="#">Q</a>
+                      </td>
+                      <td>
+                          |<br><a class="btn" href="#">Q</a>
+                      </td>
+                    </tr>
+                  </table>
+            </td>
+            <td>
+                |<br><a class="btn" href="#">Q</a>
+              <table>
+                  <tr>
+                    <td>
+                        |<br><a class="btn" href="#">Q</a>
+                      <table>
+                          <tr>
+                            <td>
+                                |<br><a class="btn" href="#">Q</a>
+                            </td>
+                            <td>
+                                |<br><a class="btn" href="#">Q</a>
+                              <table>
+                                  <tr>
+                                    <td>
+                                        |<br><a class="btn" href="#">Q</a>
+                                      <table>
+                                          <tr>
+                                            <td>
+                                                |<br><a class="btn" href="#">Q</a>
+                                            </td>
+                                            <td>
+                                                |<br><a class="btn" href="#">Q</a>
+                                            </td>
+                                          </tr>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        |<br><a class="btn" href="#">Q</a>
+                                      <table>
+                                          <tr>
+                                            <td>
+                                                |<br><a class="btn" href="#">Q</a>
+                                            </td>
+                                            <td>
+                                                |<br><a class="btn" href="#">Q</a>
+                                            </td>
+                                          </tr>
+                                        </table>
+                                    </td>
+                                  </tr>
+                                </table>
+                            </td>
+                          </tr>
+                        </table>
+                    </td>
+                    <td>
+                        |<br><a class="btn" href="#">Q</a>
+                    </td>
+                  </tr>
+                </table>
+            </td>
+          </tr>
+        </table>
+    </td>
+    <td>
+        |<br><a class="btn" href="#">S</a>
+    </td>
+  </tr>
+</table>
+</div>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<button id ="btn1">add</button>
+
+
+<script>
+  var svg = '<svg id = "svg1" width="500" height="500" style="position: absolute;top:0px;left:0px;z-index:-10">'+
+                '<line x1="0" y1="0" x2="300" y2="300" stroke="black"/>'+
+                '<line x1="110" y1="0" x2="300" y2="300" stroke="black"/>'+
+            '</svg>';
+  $(document).ready(function () {
+    var p1 = $('#123').position();
+    console.log(p1);
+
+    var p2 = $('#234').position();
+
+    $('#btn1').on("click",function(){
+      $('.content').append(svg);
+  //        $('#svg1').add()
+    });
+    var c = document.getElementById("myCanvas");
+    var ctx = c.getContext("2d");
+    ctx.moveTo(0,0);
+    ctx.lineTo(200,100);
+    ctx.stroke();
+  });
+</script>
+
+
+</body>
+</html>
+
+
+
